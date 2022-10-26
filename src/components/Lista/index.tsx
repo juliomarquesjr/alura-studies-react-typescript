@@ -1,5 +1,4 @@
 import React from "react";
-import { isTemplateExpression } from "typescript";
 
 function Lista() {
   const tarefas = [
