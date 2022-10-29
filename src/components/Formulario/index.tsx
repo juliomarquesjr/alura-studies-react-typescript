@@ -1,7 +1,7 @@
 import React from "react";
 import { ITarefa } from "../../types/tarefas";
 import Botao from "../Botao";
-import {v4 as uuidv4} from 'uuid'
+import { v4 as uuidv4 } from "uuid";
 
 import style from "./Formulario.module.scss";
 
@@ -17,7 +17,7 @@ class Formulario extends React.Component<{
     evento.preventDefault();
     this.props.setTarefas((tarefasAntigas) => [
       ...tarefasAntigas,
-      { ...this.state, selecionado: false, completado: false },
+      { ...this.state, selecionado: false, completado: false, id: uuidv4() },
     ]);
     this.setState({
       tarefa: "",
