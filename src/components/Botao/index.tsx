@@ -7,7 +7,7 @@ type Props = {
   onClick?: () => void //Recebendo uma função por props
 };
 
-const Botao: React.FC<Props> = ({ children, type, onClick }) => {
+function Botao ({ children, type, onClick }: Props){
   return (
     <button type={type} className={style.botao} onClick={onClick}>
       {children}
